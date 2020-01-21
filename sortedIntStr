@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+public class Tech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        char[] ch=str.toCharArray();
+        for(int i = 0; i < ch.length; i= i + 2){
+            for (int j = i; j < ch.length ; j= j + 2) {
+                if (ch[i] > ch[j]) {
+                    char temp = ch[j];
+                    ch[j] = ch[i];
+                    ch[i] = temp;
+                }
+            }
+        }
+        for(char e : ch){
+            System.out.print(e);
+        }
+    }
+}
